@@ -101,9 +101,9 @@ def doengagement(username, password, hashtag, limit):
                     print("#########################################################")
                     try:
                         try:
-                            driver.find_element_by_xpath("//html/body/div[4]/div[1]/div/div/a[2]").click()
+                            driver.find_element_by_xpath("//html/body/div[5]/div[1]/div/div/a[2]").click()
                         except:
-                            driver.find_element_by_xpath("//html/body/div[4]/div[1]/div/div/a").click()
+                            driver.find_element_by_xpath("//html/body/div[5]/div[1]/div/div/a").click()
                     except ElementClickInterceptedException:
                         print("WARNING: Interaction intercepted by Instagram.")
                         status_label.config(text="WARNING: Interaction intercepted by Instagram.")
@@ -134,18 +134,18 @@ def doengagement(username, password, hashtag, limit):
                     engagements += 1
                 except ElementNotInteractableException:
                     try:
-                        driver.find_element_by_xpath("//html/body/div[4]/div[1]/div/div/a[2]").click()
+                        driver.find_element_by_xpath("//html/body/div[5]/div[1]/div/div/a[2]").click()
                     except:
-                        driver.find_element_by_xpath("//html/body/div[4]/div[1]/div/div/a").click()
+                        driver.find_element_by_xpath("//html/body/div[5]/div[1]/div/div/a").click()
                     print("Post already liked: Moving to the next.")
                     timecount(3)
                     print("Complete.")
                     print("---------------------------------------------------------")
             except NoSuchElementException:
                 try:
-                    driver.find_element_by_xpath("//html/body/div[4]/div[1]/div/div/a[2]").click()
+                    driver.find_element_by_xpath("//html/body/div[5]/div[1]/div/div/a[2]").click()
                 except:
-                    driver.find_element_by_xpath("//html/body/div[4]/div[1]/div/div/a").click()
+                    driver.find_element_by_xpath("//html/body/div[5]/div[1]/div/div/a").click()
                 print("Post already liked: Moving to the next. -- NSElement")
                 timecount(3)
                 print("Complete.")
